@@ -134,7 +134,10 @@ export interface YouTubeProps {
    * https://developers.google.com/youtube/iframe_api_reference#setPlaybackRate
    */
   playbackRate?: number;
-
+  /**
+   * Use https://www.youtube-nocookie.com, for less cookies
+   */
+  noCookie?: boolean;
   // Events
 
   /**

@@ -117,6 +117,7 @@ class YouTube extends React.Component {
     /* eslint-disable react/destructuring-assignment */
     return {
       videoId: this.props.video,
+      host: this.props.noCookie ? 'https://www.youtube-nocookie.com' : undefined,
       width: this.props.width,
       height: this.props.height,
       playerVars: this.getPlayerParameters(),
@@ -374,6 +375,10 @@ if (process.env.NODE_ENV !== 'production') {
      * https://developers.google.com/youtube/iframe_api_reference#setPlaybackRate
      */
     playbackRate: PropTypes.number,
+    /**
+    * Use https://www.youtube-nocookie.com, for less cookies
+    */
+    noCookie: PropTypes.bool,
 
     // Events
     /* eslint-disable react/no-unused-prop-types */
